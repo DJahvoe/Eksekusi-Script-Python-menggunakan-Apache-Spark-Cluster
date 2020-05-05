@@ -113,29 +113,29 @@ Keterangan: <br>
 - sedangkan untuk menghentikannya dapat menggunakan <br> `docker-compose down`
 
 4. Apabila pembuatan container berhasil, maka akan keluar hasil sebagai berikut <br>
-   ![inisialisasi.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/inisialisasi.jpg)
+   ![inisialisasi.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/inisialisasi.jpg)
 
 5. Untuk memastikan container telah terbuat, cek dengan perintah `docker ps` <br>
-   ![docker_ps.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/docker_ps.jpg)
+   ![docker_ps.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/docker_ps.jpg)
 
 6. Pengecekan juga dapat dilakukan melalui web UI http://localhost:8080 <br>
-   ![localhost.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/localhost.jpg)
+   ![localhost.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/localhost.jpg)
 
 ## **Eksekusi script**
 
 <hr>
 
 1. Pengecekan container yang tersedia dengan `docker ps` <br>
-   ![docker_ps.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/docker_ps.jpg)
+   ![docker_ps.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/docker_ps.jpg)
 
 2. Memasukkan container id untuk mengeksekusi bash di dalam container dengan format perintah `docker exec -it [container_id] [direktori_bash]` <br>
-   ![container_id.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/container_id.jpg)
+   ![container_id.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/container_id.jpg)
 
 3. Submit job ditujukan kepada worker menggunakan perintah **spark-submit** dengan format berikut `spark-submit --master [alamat_master_node] [direktori_script] [banyak_partisi]` dengan contoh **alamat_master_node** sebagai berikut<br>
    `spark-submit --master spark://ada6c9c0effc:7077 examples/src/main/python/pi.py 10` <br>
-   ![spark_submit_1.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/spark_submit_1.jpg)<br>
+   ![spark_submit_1.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/spark_submit_1.jpg)<br>
 4. Apabila proses berhasil dijalankan, akan muncul hasil sebagai berikut <br>
-   ![hasil_spark_submit.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/hasil_spark_submit.jpg)<br>
+   ![hasil_spark_submit.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/hasil_spark_submit.jpg)<br>
 
 ## **Percobaan**
 
@@ -144,64 +144,64 @@ Keterangan: <br>
 ### **TASK**
 
 - Percobaan 1 (2 Workers, 2 Cores, 100 Partisi)<br>
-  ![2_2_100.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/2_2_100.jpg)<br>
+  ![2_2_100.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/2_2_100.jpg)<br>
   percobaan **berhasil** dieksekusi dengan waktu **24 detik**
 - Percobaan 2 (2 Workers, 2 Cores, 1000 Partisi)<br>
-  ![2_2_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/2_2_1000.jpg)<br>
+  ![2_2_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/2_2_1000.jpg)<br>
   percobaan **berhasil** dieksekusi dengan waktu **2.1 menit**
 - Percobaan 3 (2 Workers, 4 Cores, 100 Partisi)<br>
-  ![2_4_100.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/2_4_100.jpg)<br>
+  ![2_4_100.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/2_4_100.jpg)<br>
   percobaan **berhasil** dieksekusi dengan waktu **26 detik**
 - Percobaan 4 (2 Workers, 4 Cores, 1000 Partisi)<br>
-  ![2_4_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/2_4_1000.jpg)<br>
+  ![2_4_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/2_4_1000.jpg)<br>
   percobaan **berhasil** dieksekusi dengan waktu **2.1 menit**
 - Percobaan 5 (5 Workers, 2 Cores, 100 Partisi)<br>
-  ![5_2_100.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/5_2_100.jpg)<br>
+  ![5_2_100.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/5_2_100.jpg)<br>
   percobaan **berhasil** dieksekusi dengan waktu **53 detik**
 - Percobaan 6 (5 Workers, 2 Cores, 1000 Partisi)<br>
-  ![failed(3)_5_2_1000.jpg](<https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/failed(3)_5_2_1000.jpg>)<br>
-  ![failed_5_2_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/failed_5_2_1000.jpg)<br>
-  ![failed(2)_5_2_1000.jpg](<https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/failed(2)_5_2_1000.jpg>)<br>
+  ![failed(3)_5_2_1000.jpg](<https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/failed(3)_5_2_1000.jpg>)<br>
+  ![failed_5_2_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/failed_5_2_1000.jpg)<br>
+  ![failed(2)_5_2_1000.jpg](<https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/failed(2)_5_2_1000.jpg>)<br>
   percobaan **gagal** dieksekusi dan berhenti pada **1.7 menit**
 - Percobaan 7 (5 Workers, 4 Cores, 100 Partisi)<br>
-  ![failed(3)_5_4_100.jpg](<https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/failed(3)_5_4_100.jpg>)<br>
-  ![failed(2)_5_4_100.jpg](<https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/failed(2)_5_4_100.jpg>)<br>
-  ![failed_5_4_100.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/failed_5_4_100.jpg)<br>
+  ![failed(3)_5_4_100.jpg](<https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/failed(3)_5_4_100.jpg>)<br>
+  ![failed(2)_5_4_100.jpg](<https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/failed(2)_5_4_100.jpg>)<br>
+  ![failed_5_4_100.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/failed_5_4_100.jpg)<br>
   percobaan **gagal** dieksekusi dan berhenti pada **1.2 menit**
 - Percobaan 8 (5 Workers, 4 Cores, 1000 Partisi)<br>
-  ![failed(3)_5_4_1000.jpg](<https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/failed(3)_5_4_1000.jpg>)<br>
-  ![failed_5_4_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/failed_5_4_1000.jpg)<br>
-  ![failed(4)_5_4_1000.jpg](<https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/failed(4)_5_4_1000.jpg>)<br>
+  ![failed(3)_5_4_1000.jpg](<https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/failed(3)_5_4_1000.jpg>)<br>
+  ![failed_5_4_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/failed_5_4_1000.jpg)<br>
+  ![failed(4)_5_4_1000.jpg](<https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/failed(4)_5_4_1000.jpg>)<br>
   percobaan **gagal** dieksekusi dan berhenti pada **59 detik**
 
 ### **PERCOBAAN PENGARUH JUMLAH CORE TERHADAP SPEED**
 
 - Percobaan 1 (1 Workers, 1 Cores, 1000 Partisi)<br>
-  ![1_1_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/1_1_1000.jpg)<br>
+  ![1_1_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/1_1_1000.jpg)<br>
   percobaan **berhasil** dieksekusi dengan waktu **4 menit**
 - Percobaan 2 (1 Workers, 2 Cores, 1000 Partisi)<br>
-  ![1_2_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/1_2_1000.jpg)<br>
+  ![1_2_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/1_2_1000.jpg)<br>
   percobaan **berhasil** dieksekusi dengan waktu **2.2 menit**
 - Percobaan 3 (1 Workers, 4 Cores, 1000 Partisi)<br>
-  ![1_4_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/1_4_1000.jpg)<br>
+  ![1_4_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/1_4_1000.jpg)<br>
   percobaan **berhasil** dieksekusi dengan waktu **1.9 menit**
 - Percobaan 4 (1 Workers, 8 Cores, 1000 Partisi)<br>
-  ![1_8_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/1_8_1000.jpg)<br>
+  ![1_8_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/1_8_1000.jpg)<br>
   percobaan **berhasil** dieksekusi dengan waktu **2.0 menit**
 
 ### **PERCOBAAN PENGARUH JUMLAH WORKER TERHADAP SPEED**
 
 - Percobaan 1 (1 Workers, 1 Cores, 1000 Partisi)<br>
-  ![1_1_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/1_1_1000.jpg)<br>
+  ![1_1_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/1_1_1000.jpg)<br>
   percobaan **berhasil** dieksekusi dengan waktu **4 menit**
 - Percobaan 2 (2 Workers, 1 Cores, 1000 Partisi)<br>
-  ![2_1_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/2_1_1000.jpg)<br>
+  ![2_1_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/2_1_1000.jpg)<br>
   percobaan **berhasil** dieksekusi dengan waktu **2.4 menit**
 - Percobaan 3 (3 Workers, 1 Cores, 1000 Partisi)<br>
-  ![3_1_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/3_1_1000.jpg)<br>
+  ![3_1_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/3_1_1000.jpg)<br>
   percobaan **berhasil** dieksekusi dengan waktu **2.3 menit**
 - Percobaan 4 (4 Workers, 1 Cores, 1000 Partisi)<br>
-  ![4_1_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/tree/master/documentation/4_1_1000.jpg)<br>
+  ![4_1_1000.jpg](https://github.com/DJahvoe/Eksekusi-Script-Python-menggunakan-Apache-Spark-Cluster/blob/master/documentation/4_1_1000.jpg)<br>
   percobaan **berhasil** dieksekusi dengan waktu **2.6 menit**
 
 ### **TABEL HASIL PERCOBAAN**
